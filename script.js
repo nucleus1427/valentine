@@ -3,14 +3,13 @@ const noBtn = document.getElementById("noBtn");
 const main = document.getElementById("main");
 const gifPage = document.getElementById("gifPage");
 
-/* YES CLICK */
 yesBtn.addEventListener("click", () => {
 
-    // show GIF page
+   
     main.classList.add("hidden");
     gifPage.classList.remove("hidden");
 
-    // Confetti blast
+   
     confetti({
         particleCount: 200,
         spread: 90,
@@ -18,7 +17,6 @@ yesBtn.addEventListener("click", () => {
     });
 });
 
-/* NO BUTTON RUN AWAY */
 noBtn.addEventListener("mouseover", () => {
     const x = Math.random() * (window.innerWidth - 100);
     const y = Math.random() * (window.innerHeight - 50);
@@ -28,7 +26,6 @@ noBtn.addEventListener("mouseover", () => {
     noBtn.style.top=y+"px";
 });
 
-/* Falling hearts generator */
 function createHeart(){
     const heart = document.createElement("div");
     heart.classList.add("heart");
